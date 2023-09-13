@@ -3,23 +3,40 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title >Pagina Inicial</title>
+        <title>Pagina Inicial</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     </head>
     <body>
-        <h1 class="p-3 mb-2 bg-success text-white">AnimeCatalog Pro</h1>
+        <h1 class="p-3 mb-2 bg-success text-white text-center" >AnimeCatalog Pro</h1>
         <hr>
-        <div id="carouselExampleIndicators" class="carousel slide">
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="/static/imagens/oplive.jpg" class="d-block w-50">
+                    <img src="/static/imagens/oplive.jpg" class="d-block w-50" alt="Primeiro Slide">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/imagens/naruto.jpg" class="d-block w-50" alt="Segundo Slide">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/imagens/cdz.jpeg" class="d-block w-50" alt="Terceiro Slide">
                 </div>
             </div>
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
         </div>
-
+        <hr>
         <a href="{{url_for('lista')}}"  class="btn btn-outline-success">Lista de Animes</a>
         <a href="{{url_for('cadastrar')}}" class="btn btn-outline-success">Cadastrar Animes</a>
-        
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-6b3s6eBu7ee8bpg3UJwPh/AqKMeKv/0rQPrf5+SL7pOE8Q4xWj5Lk3U6a6og5Bz7m" crossorigin="anonymous">
+        </script>
+
     </body>
     
 </html>
