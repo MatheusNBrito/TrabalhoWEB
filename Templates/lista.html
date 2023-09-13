@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pagina Inicial</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1 class="p-3 mb-2 bg-success text-white">Lista de animes</h1>
+        <hr>
+        <table class="table table-success table-striped-columns">
+            <tr>
+                <td>ID</td>
+                <td>Nome</td>
+                <td>Genero</td>
+                <td>Tipo</td>
+                <td>Excluir</td>
+                <td>Editar</td>
+            </tr>
+            {% for anime in animes %}
+            <tr>
+                <td>{{ anime._id }}</td>
+                <td>{{ anime.nome }}</td>
+                <td>{{ anime.genero }}</td>
+                <td>{{ anime.tipo }}</td>
+                <td><a href="/excluir/{{ anime._id }}">X</a></td>
+                <td><a href="/atualizar/{{ anime._id }}">Editar</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/index" class="btn btn-outline-success">Voltar</a>
+    </body>
+</html>
